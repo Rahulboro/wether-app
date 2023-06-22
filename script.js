@@ -15,5 +15,6 @@ async function asyncCall(){
 	} catch (error) {
 		console.error(error);
 	}
-
 }
+
+console.log(asyncCall(a))
