@@ -1,4 +1,4 @@
-const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13';
+const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=lakhimpur%20assam%20india%20';
 const options = {
 	method: 'GET',
 	headers: {
@@ -7,10 +7,12 @@ const options = {
 	}
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
+async function async_get_weather(){
+	try {
+		const response = await fetch(url, options);
+		const result = await response.text();
+		console.log(result);
+	} catch (error) {
+		console.error(error);
+	}
 }
