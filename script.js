@@ -9,7 +9,7 @@ const options = {
 
 async function async_get_weather(){
 	try {
-		const response = await fetch(url, options);
+		const response = await fetch(url, options)
 		const result = await response.text();
 		console.log(result);
 	} catch (error) {
