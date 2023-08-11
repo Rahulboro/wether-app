@@ -11,8 +11,8 @@ async function async_get_weather(){
 	try {
 		const response = await fetch(url, options)
 		const result = await response.text();
-		console.log(result);
-		let noida = document.getElementById("noida_id")
+		console.log(result[0]);
+		// let noida = document.getElementById("noida_id")
 	} catch (error) {
 		console.error(error);
 	}
