@@ -9,9 +9,9 @@ const options = {
 const  async_get_weather = async ()=>{
 	try {
 		const response = await fetch(url, options)
-		const result = await response.json.current(
-			);
-			let celcis = document.getElementById("name_city").innerHTML = result([2,3])
+		const result = await response.json();
+		console.log(result.location)
+			// let celcis = document.getElementById("name_city").innerHTML = result([2,3])
 		
 
 
