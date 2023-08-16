@@ -10,47 +10,12 @@ const  async_get_weather = async ()=>{
 	try {
 		const response = await fetch(url, options)
 		const result = await response.json();
-		console.log(result.location)
-			// let celcis = document.getElementById("name_city").innerHTML = result([2,3])
-		
-
+		let celcius = result.current.temp_c
+		const cityElement = document.getElementById("name_city");
+		cityElement.innerText = celcius + "°C";
 
 	} catch (error) {
-		console.error(error);
+		console("this is the error");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import axios from "axios";
-
-
-// const options = {
-//   method: 'GET',
-//   url: 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather',
-//   params: {city: 'Seattle'},
-//   headers: {
-//     'X-RapidAPI-Key': 'f66624530cmshd7e361d254eb304p19c792jsncf3ac59211eb',
-//     'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-//   }
-// };
-// const data_coming = async()=>{
-// 	try {
-// 		const response = await axios.request(options);
-// 		console.log(response.data);
-// 	} catch (error) {
-// 		console.error(error);
-// 	}
-// }
+async_get_weather()
