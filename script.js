@@ -10,9 +10,11 @@ const  async_get_weather = async ()=>{
 	try {
 		const response = await fetch(url, options)
 		const result = await response.json();
-		let celcius = result.current.temp_c
-		const cityElement = document.getElementById("name_city");
-		cityElement.innerText = celcius + "°C";
+		// let celcius = result.current.temp_c
+		// const cityElement = document.getElementById("name_city");
+		// cityElement.innerText = celcius + "°C";
+		
+		
 
 	} catch (error) {
 		console("this is the error");
