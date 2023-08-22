@@ -13,7 +13,7 @@ const  async_get_weather = async ()=>{
 
 		// storing values 
 		let celcius = result.current.temp_c
-		const cityElement = document.getElementById("name_city");
+		const cityElement = document.getElementById("max_temp");
 		cityElement.innerText = celcius + "°C";
 		
 		
