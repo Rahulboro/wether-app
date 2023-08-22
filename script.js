@@ -29,6 +29,13 @@ const  async_get_weather = async ()=>{
 		const weather_day = document.getElementById("day_weather")
 		weather_day.innerText = displayWeather
 
+		// display wind speed 
+
+		let wind_speed_kph = result.current.wind_kph
+		
+		const kph_wind = document.getElementById("wind_kph")
+		kph_wind.innerText = wind_speed_kph + " KPH "
+
 	} catch (error) {
 		console("this is the error");
 	}
