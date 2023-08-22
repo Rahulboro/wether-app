@@ -23,7 +23,11 @@ const  async_get_weather = async ()=>{
 		const fElement = document.getElementById("temp_f")
 		fElement.innerText = fahrenheit + "°F"
 		
-		
+		// display how will be the weather 
+
+		let displayWeather = result.current.condition.text
+		const weather_day = document.getElementById("day_weather")
+		weather_day.innerText = displayWeather
 
 	} catch (error) {
 		console("this is the error");
