@@ -1,119 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheather App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wheather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white dark:bg-slate-800">
+  <!--#################### here starts the navbar section  ###################-->
 
-
-    <!--#################### here starts the navbar section  ###################-->
-
-
-        <header class="text-gray-600 dark:text-gray-500 body-font">
-            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                  <img class="h-10 " src="./cloudy.png" alt="cloudy image">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+  <header class="text-gray-600 dark:text-gray-500 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img class="h-10" src="./cloudy.png" alt="cloudy image" />
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path> -->
-                <!-- </svg> -->
-                <span class="ml-3 text-xl hover:text-gray-900 text-gray-500 dark:hover:text-white">Wheather</span>
-              </a>
-              <nav class="md:ml-auto 
-              flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Noida <span id="noida_id noida_btn"></span></a>
-                <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Mumbai <span class="mumbai_id mumbai_btn"></span></a>
-                <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Delhi <span class="delhi_id delhi_btn"></span></a>
-                <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Bangalaru <span class="bangalaru_id bangalaru_btn"></span></a>
-              </nav> 
-              <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">search
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
+        <!-- </svg> -->
+        <span class="ml-3 text-xl hover:text-gray-900 text-gray-500 dark:hover:text-white">Wheather</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Noida <span id="noida_id noida_btn"></span></a>
+        <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Mumbai <span class="mumbai_id mumbai_btn"></span></a>
+        <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Delhi <span class="delhi_id delhi_btn"></span></a>
+        <a class="mr-5 hover:text-gray-900 dark:hover:text-white">Bangalaru <span
+            class="bangalaru_id bangalaru_btn"></span></a>
+      </nav>
+      <div class="">
+        <input class="rounded p-2 bg-gray-300 text-gray-600 dark:bg-gray-500 dark:text-white" type="text" placeholder="Search..." />
+        <button class="ui button bg-sky-600 text-white p-2 rounded-lg ">Search</button>
+      </div>
+    </div>
+  </header>
+  <!--*********** ends of the navbar section  ****************-->
+
+  <!--############# this is the blog section  ############-->
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex justify-center m-4">
+        <div class="p-4">
+          <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
+            <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="
+                  background-image: url(https://source.unsplash.com/300x150/?skyline);
+                ">
+              <p
+                class="px-2 py-1 text-sm tracking-widest dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">
+                Miami
+              </p>
             </div>
-          </header>
-          <!--*********** ends of the navbar section  ****************-->
-
-
-          <!--############# this is the blog section  ############-->
-
-
-
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex justify-center m-4">
-                <div class="p-4">
-                  <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
-                    <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://source.unsplash.com/300x150/?skyline);">
-                      <p class="px-2 py-1 text-sm tracking-widest dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">Miami</p>
-                    </div>
-                    <div class="flex justify-between p-4">
-                      <div class="flex flex-col flex-1 gap-4">
-                        <div class="flex justify-between">
-                          <div class="flex gap-2">
-                            <span class="text-5xl font-semibold">36°</span>
-                            <span class="text-lg dark:text-gray-400">/ 28°</span>
-                          </div>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12 dark:text-yellow-400 fill-current shrink-0">
-                            <path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
-                            <rect width="32" height="48" x="240" y="16"></rect>
-                            <rect width="32" height="48" x="240" y="448"></rect>
-                            <rect width="48" height="32" x="448" y="240"></rect>
-                            <rect width="48" height="32" x="16" y="240"></rect>
-                            <rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
-                            <rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
-                            <rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
-                            <rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
-                          </svg>
-                        </div>
-                        <p class="text-sm">Mostly sunny throughout the day.
-                          <br>6-10 KPH winds.
-                        </p>
-                      </div>
-                      <div class="text-sm leading-loose">
-                        <div class="flex items-center"></div>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
-                      <div class="flex items-center space-x-1">
-                        <span class="font-bold">8</span>
-                        <span class="text-sm">UV</span>
-                      </div>
-                      <div class="flex items-center space-x-1">
-                        <span class="font-bold">5%</span>
-                        <span class="text-sm">Precip</span>
-                      </div>
-                      <div class="flex items-center space-x-1">
-                        <span class="font-bold">14°</span>
-                        <span class="text-sm">Dew Point</span>
-                      </div>
-                    </div>
+            <div class="flex justify-between p-4">
+              <div class="flex flex-col flex-1 gap-4">
+                <div class="flex justify-between">
+                  <div class="flex gap-2">
+                    <span class="text-5xl font-semibold">36°</span>
+                    <span class="text-lg dark:text-gray-400">/ 28°</span>
                   </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-12 h-12 dark:text-yellow-400 fill-current shrink-0">
+                    <path
+                      d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z">
+                    </path>
+                    <rect width="32" height="48" x="240" y="16"></rect>
+                    <rect width="32" height="48" x="240" y="448"></rect>
+                    <rect width="48" height="32" x="448" y="240"></rect>
+                    <rect width="48" height="32" x="16" y="240"></rect>
+                    <rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
+                    <rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
+                    <rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)">
+                    </rect>
+                    <rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
+                  </svg>
                 </div>
+                <p class="text-sm">
+                  Mostly sunny throughout the day. <br />6-10 KPH winds.
+                </p>
+              </div>
+              <div class="text-sm leading-loose">
+                <div class="flex items-center"></div>
               </div>
             </div>
-          </section>
-          <!--**************** ends of the section of weather ****************-->
+            <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
+              <div class="flex items-center space-x-1">
+                <span class="font-bold">8</span>
+                <span class="text-sm">UV</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span class="font-bold">5%</span>
+                <span class="text-sm">Precip</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span class="font-bold">14°</span>
+                <span class="text-sm">Dew Point</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--**************** ends of the section of weather ****************-->
 
-
-
-          <!--#################### this is the footer section  ####################-->
-          <footer class="text-gray-600 body-font">
-            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-              <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                 <img class="h-10 " src="./cloudy.png" alt="cloudy image">
-                <span class="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-3 text-xl">Wheather</span>
-              </a>
-              <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023ujjal —
-                <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">@ujjal Wheather</a>
-              </p>
-              <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <!-- <a href="#" class="text-gray-500">
+  <!--#################### this is the footer section  ####################-->
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img class="h-10" src="./cloudy.png" alt="cloudy image" />
+        <span class="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-3 text-xl">Wheather</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        © 2023ujjal —
+        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" rel="noopener noreferrer"
+          target="_blank">@ujjal Wheather</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <!-- <a href="#" class="text-gray-500">
                   <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                   </svg>
@@ -129,16 +131,19 @@
                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                   </svg>
                 </a> -->
-                Connect With me
-                <a href="https://www.linkedin.com/in/ujjal-moni-bordoloi/" class="ml-3 text-gray-500">
-                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                    <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                  </svg>
-                </a>
-              </span>
-            </div>
-          </footer>
-    <script src="./script.js"></script>
+        Connect With me
+        <a href="https://www.linkedin.com/in/ujjal-moni-bordoloi/" class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
 </body>
+
 </html>
