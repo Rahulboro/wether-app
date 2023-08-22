@@ -32,9 +32,12 @@ const  async_get_weather = async ()=>{
 		// display wind speed 
 
 		let wind_speed_kph = result.current.wind_kph
-		
+		let wind_speed_mph = result.current.wind_mph
 		const kph_wind = document.getElementById("wind_kph")
 		kph_wind.innerText = wind_speed_kph + " KPH "
+		const mph_wind = document.getElementById("wind_mph")
+		mph_wind.innerText = wind_speed_mph + " MPH "
+
 
 	} catch (error) {
 		console("this is the error");
