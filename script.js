@@ -13,8 +13,12 @@ const  async_get_weather = async ()=>{
 
 		// storing values 
 		let celcius = result.current.temp_c
-		const cityElement = document.getElementById("max_temp");
+		const cityElement = document.getElementById("temp_c");
 		cityElement.innerText = celcius + "°C";
+
+		let fahrenheit = result.current.temp_f
+		const fElement = document.getElementById("temp_f")
+		fElement.innerText = fahrenheit + "F"
 		
 		
 
