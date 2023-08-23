@@ -6,14 +6,15 @@ const options = {
 		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
 	}
 };
+
 const  async_get_weather = async ()=>{
 	try {
 		const response = await fetch(url, options)
 		const result = await response.json();
 
-		// display in celcius 
-
-		let celcius = result.current.temp_c
+		const get_weather = (city) => {
+			// display in celcius 
+			let celcius = result.current.temp_c
 		const cityElement = document.getElementById("temp_c");
 		cityElement.innerText = celcius + "°C";
 
@@ -37,6 +38,15 @@ const  async_get_weather = async ()=>{
 		kph_wind.innerText = wind_speed_kph + " KPH "
 		const mph_wind = document.getElementById("wind_mph")
 		mph_wind.innerText = wind_speed_mph + " MPH "
+
+		}
+
+		get_weather()
+		
+
+		const submit_btn = document.getElementById("submit")
+		
+
 
 
 	} catch (error) {
