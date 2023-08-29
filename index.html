@@ -28,8 +28,11 @@
             class="bangalaru_id bangalaru_btn"></span></a>
       </nav>
       <div class="search_btn">
-        <input class="rounded p-2 bg-gray-300 text-gray-600 dark:bg-gray-500 dark:text-white" type="search" placeholder="Search..." />
-        <button class="ui button bg-sky-600 text-white p-2 rounded-lg" id="submit" type="submit">Search</button>
+        <input class="rounded p-2 bg-gray-300 text-gray-600 dark:bg-gray-500 dark:text-white" id="city_search"
+          type="text" placeholder="Search..." />
+        <button class="ui button bg-sky-600 text-white p-2 rounded-lg" id="submit_btn" type="submit">
+          Search
+        </button>
       </div>
     </div>
   </header>
@@ -45,8 +48,7 @@
             <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="
                   background-image: url(https://source.unsplash.com/300x150/?skyline);
                 ">
-              <p
-                class="px-2 py-1 text-sm tracking-widest dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">
+              <p class="px-2 py-1 text-sm tracking-widest dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg" id="city_name">
                 Miami
               </p>
             </div>
@@ -74,7 +76,9 @@
                   </svg>
                 </div>
                 <p class="text-sm">
-                  Mostly <span id="day_weather"></span> throughout the day. <br /><span id="wind_kph"></span> or <span id="wind_mph"></span>winds speed.
+                  Mostly <span id="day_weather"></span> throughout the day.
+                  <br /><span id="wind_kph"></span> or
+                  <span id="wind_mph"></span>winds speed.
                 </p>
               </div>
               <div class="text-sm leading-loose">
@@ -143,7 +147,7 @@
       </span>
     </div>
   </footer>
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>

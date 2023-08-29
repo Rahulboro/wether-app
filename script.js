@@ -1,4 +1,7 @@
-const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=lakhimpur%20assam%20india%20';
+// this is js fetch 
+
+const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
+// 53.1%2C-0.13
 const options = {
 	method: 'GET',
 	headers: {
@@ -13,6 +16,9 @@ const  async_get_weather = async ()=>{
 		const result = await response.json();
 
 		const get_weather = (city) => {
+			let cityName = document.getElementById("city_name")
+			cityName.innerText = city
+
 			// display in celcius 
 			let celcius = result.current.temp_c
 		const cityElement = document.getElementById("temp_c");
@@ -40,17 +46,21 @@ const  async_get_weather = async ()=>{
 		mph_wind.innerText = wind_speed_mph + " MPH "
 
 		}
-
-		get_weather()
 		
+		// submit btn 
 
-		const submit_btn = document.getElementById("submit")
-		
+		const submit = document.getElementById("submit_btn")
+		submit.addEventListener("click", (e)=>{
+			// e.preventDefault()
+			get_weather(city_search.value)
+		})
 
+		get_weather("")
 
 
 	} catch (error) {
 		console("this is the error");
 	}
 }
-async_get_weather()
+
+async_get_weather("city")
