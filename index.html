@@ -29,7 +29,7 @@
       </nav>
       <div class="search_btn">
         <input class="rounded p-2 bg-gray-300 text-gray-600 dark:bg-gray-500 dark:text-white" id="city_search"
-          type="text" placeholder="Search..." />
+          type="search" placeholder="Search..." />
         <button class="ui button bg-sky-600 text-white p-2 rounded-lg" id="submit_btn" type="submit">
           Search
         </button>
@@ -87,15 +87,15 @@
             </div>
             <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
               <div class="flex items-center space-x-1">
-                <span class="font-bold">8</span>
+                <span id="uv_id" class="font-bold">8</span>
                 <span class="text-sm">UV</span>
               </div>
-              <div class="flex items-center space-x-1">
-                <span class="font-bold">5%</span>
+              <div  class="flex items-center space-x-1">
+                <span id="Precip_id" class="font-bold">5%</span>
                 <span class="text-sm">Precip</span>
               </div>
               <div class="flex items-center space-x-1">
-                <span class="font-bold">14°</span>
+                <span id="dew_id" class="font-bold">14°</span>
                 <span class="text-sm">Dew Point</span>
               </div>
             </div>
@@ -147,7 +147,7 @@
       </span>
     </div>
   </footer>
-  <script type="module" src="./script.js"></script>
+  <script  src="./script.js"></script>
 </body>
 
 </html>
