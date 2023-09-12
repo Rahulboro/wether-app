@@ -10,23 +10,20 @@ const options = {
 	}
 };
 
-const  async_get_weather = async (city)=>{
+const  async_get_weather = async ()=>{
 	try {
-		const response = await fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=' + city, options)
+		const abc = document.getElementById('city_search').value
+		const response = await fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=' + abc, options)
 		const result = await response.json();
 		console.log(result)
 
 		
 		const submit = document.getElementById("submit_btn")
 	submit.addEventListener("click", ()=>{
-		get_weather((city_search.value))
-	});
+		get_weather(abc)
+		});
 		
-		const get_weather = (city) => {
-			
-			let cityName = document.getElementById("city_search")
-		cityName.innerText = city
-			// display in celcius 
+		const get_weather = () => {
 			let celcius = result.current.temp_c
 			const cityElement = document.getElementById("temp_c");
 			cityElement.innerText = celcius + "°C";
@@ -69,4 +66,4 @@ const  async_get_weather = async (city)=>{
 
 }
 
-async_get_weather()
+async_get_weather();
